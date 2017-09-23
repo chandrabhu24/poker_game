@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head> <h1> FREE POKER GAME</H1><link rel="stylesheet" type="text/css" href="style1.css"/> 
-          <link rel="stylesheet" type="text/css" href="style1.css"/> 
-		  <link rel="stylesheet" type="text/css" href="style1.css"/> 
+<head> <h1> FREE POKER GAME</H1>
+	 <link rel="stylesheet" type="text/css" href="style1.css"/> 
+         <link rel="stylesheet" type="text/css" href="style2.css"/> 
+         <link rel="stylesheet" type="text/css" href="style3.css"/> 
       
-	     <title>DRAW POKER GAME</title>
+	         <title>DRAW POKER GAME</title>
 		 
 		 <script LANGAUGE="Javascript1.1">
-                var score =100;
+                          var score =100;
 			  var dealt =false ;
 			  var hand =new Array(6);
 			  var held =new Array(6);
 			  var deck =new Array(53);
 			  
 			  function DealDraw(){
-			         if(dealt==true )  Draw();
+			         if(dealt==true )  
+					 Draw();
                                      else
-								       Deal();
+					 Deal();
 	                               }
 								   
 		 function Deal(){                                 // Fill the deck in order
@@ -28,6 +30,7 @@
 					 }
 					 
 				// shuffle the deck 
+			 
 				var n=Math.floor(400* Math.random() +500);
 				for(i=1;i<n; i++){
 				  card1=Math.floor(52*math.random() +1);
@@ -40,9 +43,9 @@
 					//DEAL AND DISPLAY CARDS
         for(i=1;i<6;i++){
                  hand[i]=deck[i];
-                document.images[i].src =hand[i].fname();
+                 document.images[i].src =hand[i].fname();
                  document.images[i+5].src="hold.gif";
-                held[i]= false;
+                 held[i]= false;
 			         	}
 				dealt = true;
 				score=score-1;   // deduct one for bet amounnt
